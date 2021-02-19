@@ -1,0 +1,16 @@
+<h2> Quiz: </h2>
+<h3>{{quiz | json}}</h3>
+
+<h2> QuestionList[0]: </h2>
+<a> {{ quiz.questionList[0] | json }}</a>
+
+<h2> Question: </h2>
+<a> {{ quiz.questionList[0].text.toString() }}</a>
+
+<h2> Answers for first question: </h2>
+<li *ngFor = "let answer of quiz.questionList[0].answers">
+  <input type="checkbox"> <a> {{ answer.text }}</a>
+
+</li>
+
+
